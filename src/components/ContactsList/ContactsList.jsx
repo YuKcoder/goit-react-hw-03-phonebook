@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import ContactItem from '../ContactItem';
 
 export default function ContactsList({ visibleNumbers, onDeleteContact }) {
@@ -15,3 +16,12 @@ export default function ContactsList({ visibleNumbers, onDeleteContact }) {
     </ul>
   );
 }
+
+ContactsList.propTypes = {
+  visibleNumbers: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      onDeleteContact: PropTypes.func,
+    }).isRequired
+  ),
+};
