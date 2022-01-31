@@ -21,7 +21,7 @@ ContactsList.propTypes = {
   visibleNumbers: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,
-      onDeleteContact: PropTypes.func,
     }).isRequired
   ),
+  onDeleteContact: PropTypes.func.isRequired,
 };
